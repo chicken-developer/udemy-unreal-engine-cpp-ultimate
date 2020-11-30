@@ -11,6 +11,8 @@ AFloater::AFloater()
 	MyStaticMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("MyStaticMesh"));
 	PlaceLocation = FVector(0.0f);
 	InitialLocation = FVector(0.0f);
+	WorldOrigin = FVector(0.0f);
+	bShouldFloat = false;
 	bInitializeFloaterLocation = false;
 }
 
@@ -31,6 +33,7 @@ void AFloater::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 	if(bShouldFloat) 
 	{
-		this->AddActorLocalOffset(FVector(1.0f,1.0f,1.0f),)
+		FHitResult HitResult;
+		this->AddActorLocalOffset(FVector(1.0f, 1.0f, 1.0f), false, &HitResult);
 	}
 }

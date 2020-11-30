@@ -25,6 +25,9 @@ public:
 	UPROPERTY(VisibleInstanceOnly, BlueprintReadWrite, Category="FloaterVariable")
 	FVector PlaceLocation;
 
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="FloaterVariable")
+	FVector InitialDirection;
+
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "FloaterVariable")
 	bool bShouldFloat;
 
