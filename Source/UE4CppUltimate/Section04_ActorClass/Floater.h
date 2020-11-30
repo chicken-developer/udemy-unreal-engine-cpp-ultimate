@@ -17,7 +17,22 @@ public:
 	AFloater();
 
 	UPROPERTY(VisibleAnywhere, Category="StaticMesh")
-	UStaticMeshComponent* myStaticMesh;
+	UStaticMeshComponent* MyStaticMesh;
+
+	UPROPERTY(EditInstanceOnly, BlueprintReadWrite, Category="FloaterVariable")
+	FVector InitialLocation;
+
+	UPROPERTY(VisibleInstanceOnly, BlueprintReadWrite, Category="FloaterVariable")
+	FVector PlaceLocation;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "FloaterVariable")
+	bool bShouldFloat;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category="FloaterVariable")
+	bool bInitializeFloaterLocation;
+
+	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category="FloaterVariable")
+	FVector WorldOrigin;
 
 protected:
 	// Called when the game starts or when spawned
@@ -26,5 +41,6 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+
 
 };
