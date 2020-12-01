@@ -16,7 +16,7 @@ public:
 	// Sets default values for this actor's properties
 	AFloater();
 
-	UPROPERTY(VisibleAnywhere, Category="StaticMesh")
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category="StaticMesh")
 	UStaticMeshComponent* MyStaticMesh;
 
 	UPROPERTY(EditInstanceOnly, BlueprintReadWrite, Category="FloaterVariable")
